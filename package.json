@@ -1,5 +1,5 @@
 {
-  "name": "vue-istillo",
+  "name": "vue-istilo",
   "version": "0.0.0",
   "description": "A lightweight and modular front-end CSS framework.",
   "license": "MIT",
@@ -8,21 +8,21 @@
     "Jerald Austero <hello@jeraldaustero.com>"
   ],
   "keywords": [
-    "istillo",
+    "istilo",
     "vue",
     "vue3",
     "vuejs",
-    "vue-istillo",
+    "vue-istilo",
     "components",
-    "istillo-ui",
-    "istillo-css"
+    "istilo-ui",
+    "istilo-css"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/istillo/vue-istillo.git"
+    "url": "https://github.com/istilo/vue-istilo.git"
   },
   "bugs": {
-    "url": "https://github.com/istillo/vue-istillo/issues"
+    "url": "https://github.com/istilo/vue-istilo/issues"
   },
   "sideEffects": [
     "*.css",
