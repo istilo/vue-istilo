@@ -1,0 +1,45 @@
+@import '@/scss/helpers';
+@import '@/scss/functions';
+@import '@/scss/mixins';
+
+// Name:            Swticher
+// Description:     Component to navigate through different content panes
+//
+// Component:       `#{$prefix}switcher`
+//
+// States:          `#{$prefix}active`
+//
+// ========================================================================
+
+/* ==================================================
+	Component: Switcher
+   ================================================== */
+
+/*
+ * Reset list 
+ */
+
+.#{$prefix}switcher {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Items
+   ================================================== */
+
+/*
+ * Hide not active items
+ */
+
+.#{$prefix}switcher > :not(.#{$prefix}active) {
+	display: none;
+}
+
+/*
+ * Remove margin from the last-child
+ */
+
+.#{$prefix}switcher > * > :last-child {
+	margin-bottom: 0;
+}

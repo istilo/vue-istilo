@@ -1,0 +1,342 @@
+@use 'sass:math';
+
+@import '@/scss/helpers';
+@import '@/scss/functions';
+@import '@/scss/mixins';
+
+// ============================================================
+// Name:            Table
+// Description:     Styles for table
+//
+// Component:       `#{$prefix}table`
+//
+// Modifiers:       `#{$prefix}table-middle`
+//                  `#{$prefix}table-divider`
+//                  `#{$prefix}table-striped`
+//                  `#{$prefix}table-hover`
+//                  `#{$prefix}table-small`
+//                  `#{$prefix}table-justify`
+//                  `#{$prefix}table-shrink`
+//                  `#{$prefix}table-expand`
+//                  `#{$prefix}table-link`
+//                  `#{$prefix}table-responsive`
+//
+// States:          `#{$prefix}active`
+//
+// ============================================================
+
+// Variables
+// ============================================================
+
+$table-margin-vertical: margin(global) !default;
+
+$table-cell-padding-vertical: 16px !default;
+$table-cell-padding-horizontal: 12px !default;
+
+$table-header-background: background-color(background) !default;
+
+$table-header-cell-font-size: font(size) !default;
+$table-header-cell-font-weight: font-weight(light) !default;
+$table-header-cell-color: color(default) !default;
+$table-header-cell-padding-vertical: margin(small) !default;
+$table-header-cell-padding-horizontal: margin(small) + 2 !default;
+
+$table-footer-font-size: font-size(small) !default;
+
+$table-caption-font-size: font-size(small) !default;
+$table-caption-color: color(muted) !default;
+
+$table-row-active-background: rgba(theme-color(primary), 0.04) !default;
+
+$table-divider-border-width: 0.235px !default;
+$table-divider-border: border(color) !default;
+
+$table-striped-row-background: $global-muted-background !default;
+
+$table-hover-row-background: #fcfcfc !default;
+
+$table-small-cell-padding-vertical: 10px !default;
+$table-small-cell-padding-horizontal: 12px !default;
+
+$table-large-cell-padding-vertical: 22px !default;
+$table-large-cell-padding-horizontal: 12px !default;
+
+$table-expand-min-width: 150px !default;
+
+/* ============================================================
+    Component: Table
+   ============================================================ */
+
+/*
+ * 1. Remove most spacing between table cells.
+ * 2. Behave like a block element
+ * 3. Style
+ */
+
+.#{$prefix}table {
+	/* 1 */
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	/* 2 */
+	width: 100%;
+
+	/* 3 */
+	margin-bottom: $table-margin-vertical;
+
+	border: 1px solid #dadada;
+}
+
+/* Add margin if adjacent element */
+* + .#{$prefix}table {
+	margin-top: $table-margin-vertical;
+}
+
+/* Header
+   ============================================================ */
+
+.#{$prefix}table > thead {
+	background-color: $table-header-background;
+
+	border: 1px solid #dadada;
+}
+
+/* Header cell
+   ============================================================ */
+
+/*
+ * 1. Style
+ */
+.#{$prefix}table th {
+	padding: $table-header-cell-padding-vertical $table-header-cell-padding-horizontal;
+	text-align: left;
+	vertical-align: bottom;
+
+	/* 1 */
+	font-size: $table-header-cell-font-size;
+	font-weight: $table-header-cell-font-weight;
+	color: $table-header-cell-color;
+
+	padding: 20px 30px;
+}
+
+/* Cell
+   ============================================================ */
+
+.#{$prefix}table td {
+	padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+	vertical-align: top;
+	color: color(default);
+	font-weight: 300;
+
+	padding: 20px 30px;
+}
+
+/*
+ * Remove margin from the last-child
+ */
+
+.#{$prefix}table td > :last-child {
+	margin-bottom: 0;
+}
+
+/* Footer
+   ============================================================ */
+
+.#{$prefix}table tfoot {
+	font-size: $table-footer-font-size;
+}
+
+/* Caption
+   ============================================================ */
+
+.#{$prefix}table caption {
+	font-size: $table-caption-font-size;
+	text-align: left;
+	color: $table-caption-color;
+}
+
+/* Alignment modifier
+   ============================================================ */
+
+.#{$prefix}table-middle,
+.#{$prefix}table-middle td {
+	vertical-align: middle !important;
+}
+
+/* Style modifier
+   ============================================================ */
+
+/*
+ * Divider
+ */
+
+.#{$prefix}table-divider tbody > tr:not(:first-child),
+.#{$prefix}table-divider tbody > :not(:first-child) > tr,
+.#{$prefix}table-divider tbody > :first-child > tr:not(:first-child) {
+	border-top: $table-divider-border-width solid $table-divider-border;
+}
+
+/*
+ * Striped
+ */
+
+.#{$prefix}table-striped > tr:nth-of-type(odd),
+.#{$prefix}table-striped tbody tr:nth-of-type(odd) {
+	background: $table-striped-row-background;
+}
+
+/*
+ * Hover
+ */
+
+.#{$prefix}table-hover > tr:hover,
+.#{$prefix}table-hover tbody tr:hover {
+	background: $table-hover-row-background;
+}
+
+/* Activate state
+   ============================================================ */
+
+.#{$prefix}table > tr.#{$prefix}active,
+.#{$prefix}table tbody tr.#{$prefix}active {
+	background: $table-row-active-background;
+}
+
+/* Size modifier
+   ============================================================ */
+
+.#{$prefix}table-small th,
+.#{$prefix}table-small td {
+	padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal;
+}
+
+.#{$prefix}table-large th,
+.#{$prefix}table-large td {
+	padding: $table-large-cell-padding-vertical $table-large-cell-padding-horizontal;
+}
+
+/* Justify modifier
+   ============================================================ */
+
+.#{$prefix}table-justify th:first-child,
+.#{$prefix}table-justify td:first-child {
+	padding-left: 0;
+}
+
+.#{$prefix}table-justify th:last-child,
+.#{$prefix}table-justify td:last-child {
+	padding-right: 0;
+}
+
+/* Cell size modifier
+   ============================================================ */
+
+.#{$prefix}table-shrink {
+	width: 1px;
+}
+
+.#{$prefix}table-expand {
+	min-width: $table-expand-min-width;
+}
+
+/* Cell link modifier
+   ============================================================ */
+
+/*
+ * Does not work with `uk-table-justify` at the moment
+ */
+
+.#{$prefix}table-link {
+	padding: 0 !important;
+}
+
+.#{$prefix}table-link > a {
+	display: block;
+	padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+}
+
+.#{$prefix}table-small .#{$prefix}table-link > a {
+	padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal;
+}
+
+/* Responsive table
+   ============================================================ */
+
+/* Phone landscape and smaller */
+@include respond-to-max(small) {
+	.#{$prefix}table-responsive,
+	.#{$prefix}table-responsive tbody,
+	.#{$prefix}table-responsive th,
+	.#{$prefix}table-responsive td,
+	.#{$prefix}table-responsive tr {
+		display: block;
+	}
+
+	.#{$prefix}table-responsive thead {
+		display: none;
+	}
+
+	.#{$prefix}table-responsive th,
+	.#{$prefix}table-responsive td {
+		width: auto !important;
+		max-width: none !important;
+		min-width: 0 !important;
+		overflow: visible !important;
+		white-space: normal !important;
+	}
+
+	.#{$prefix}table-responsive th:not(:first-child):not(.#{$prefix}table-link),
+	.#{$prefix}table-responsive td:not(:first-child):not(.#{$prefix}table-link),
+	.#{$prefix}table-responsive .#{$prefix}table-link:not(:first-child) > a {
+		padding-top: math.ceil(math.div($table-cell-padding-vertical, 3)) !important;
+	}
+
+	.#{$prefix}table-responsive th:not(:last-child):not(.#{$prefix}table-link),
+	.#{$prefix}table-responsive td:not(:last-child):not(.#{$prefix}table-link),
+	.#{$prefix}table-responsive .#{$prefix}table-link:not(:last-child) > a {
+		padding-bottom: math.ceil(math.div($table-cell-padding-vertical, 3)) !important;
+	}
+
+	.#{$prefix}table-justify.#{$prefix}table-responsive th,
+	.#{$prefix}table-justify.#{$prefix}table-responsive td {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.#{$prefix}td-checkbox {
+	visibility: hidden;
+	position: absolute;
+	left: -40px;
+	width: 40px;
+
+	transform: translateY(35%);
+}
+
+.#{$prefix}table.#{$prefix}checkbox-active .#{$prefix}td-checkbox,
+.#{$prefix}table tr.#{$prefix}active > td,
+.#{$prefix}active.#{$prefix}td-checkbox {
+	visibility: visible;
+}
+
+.#{$prefix}table tr {
+	position: relative;
+}
+
+/* Table item Index
+   ============================================================ */
+.#{$prefix}table-index {
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+	box-sizing: border-box;
+
+	/* 2 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* 3 */
+	background-color: background-color(background);
+}
