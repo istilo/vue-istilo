@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+// Text colors
+@function color($value) {
+	@if map-has-key($text-color, $value) {
+		@return map-get($text-color, $value);
+	}
+
+	@warn 'The key `#{$value}` is no available in the map';
+	@return null;
+}
+
+// Text colors
+@function link-color($value) {
+	@if map-has-key($link-color, $value) {
+		@return map-get($link-color, $value);
+	}
+
+	@warn 'The key `#{$value}` is no available in the map';
+	@return null;
+}
+
+// background modifiers
+@function theme-color($scheme) {
+	@if map-has-key($theme-color, $scheme) {
+		@return map-get($theme-color, $scheme);
+	}
+
+	@warn 'The key `#{$scheme}` is no available in the map';
+	@return null;
+}
+
+// Wrapper modifiers
+@function background-color($scheme) {
+	@if map-has-key($background-color, $scheme) {
+		@return map-get($background-color, $scheme);
+	}
+
+	@warn 'The key `#{$scheme}` is no available in the map';
+	@return null;
+}
+
+// Return dark or light text color base on background color contrast
+@function color-yiq($color) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+
+	$yiq: math.div(($r * 299) + ($g * 587) + ($b * 144), 1000);
+
+	@if ($yiq >= $yiq-contrasted-threshold) {
+		@return $yiq-text-dark;
+	} @else {
+		@return $yiq-text-light;
+	}
+}

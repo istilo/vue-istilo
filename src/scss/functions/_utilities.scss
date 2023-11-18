@@ -1,0 +1,59 @@
+// Used in margin, section, list
+@function border($value) {
+	@if map-has-key($border, $value) {
+		@return map-get($border, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}
+
+// Used in margin, section, list
+@function box-shadow($value) {
+	@if map-has-key($box-shadow, $value) {
+		@return map-get($box-shadow, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}
+
+// Used in margin, section, list
+@function margin($value) {
+	@if map-has-key($margin, $value) {
+		@return map-get($margin, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}
+
+// for grid, column, containers, align, cards and padding
+@function gutter($value) {
+	@if map-has-key($gutter, $value) {
+		@return map-get($gutter, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}
+
+// Control Height
+@function control-height($value) {
+	@if map-has-key($control-height, $value) {
+		@return map-get($control-height, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}
+
+// Control Height
+@function layer($value) {
+	@if map-has-key($layer, $value) {
+		@return map-get($layer, $value);
+	}
+
+	@warn 'The key `#{$value}` is not available in the map';
+	@return null;
+}

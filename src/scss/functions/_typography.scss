@@ -1,0 +1,29 @@
+// Default settings of typography
+@function font($value) {
+	@if map-has-key($font, $value) {
+		@return map-get($font, $value);
+	}
+
+	@warn 'The key `#{$value}` is no available in the map';
+	@return null;
+}
+
+// Different size of font
+@function font-size($value) {
+	@if map-has-key($font-size, $value) {
+		@return map-get($font-size, $value);
+	}
+
+	@warn 'The key `#{$value}` is no available in the map';
+	@return null;
+}
+
+// Different weight of text
+@function font-weight($value) {
+	@if map-has-key($font-weight, $value) {
+		@return map-get($font-weight, $value);
+	}
+
+	@warn 'The key `#{$value}` is no available in the map';
+	@return null;
+}
