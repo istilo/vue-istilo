@@ -1,0 +1,140 @@
+/*
+ * It create modifiers using `theme-colors`
+ */
+@mixin create-modifiers($component) {
+	@each $modifier, $style in $theme-color {
+		.#{$prefix}#{$component}-#{$modifier} {
+			@each $color in $style {
+				background-color: $color;
+				color: color-yiq($color);
+			}
+		}
+	}
+}
+
+/*
+ * It create modifiers using `theme-colors` with selectors (hover, active,
+ * focus)
+ */
+@mixin create-modifiers-with-selectors($type, $component) {
+	@if ($type == 'background') {
+		@each $modifier, $style in $theme-color {
+			@each $color in $style {
+				@if ($modifier != 'default') {
+					.#{$prefix}#{$component}-#{$modifier} {
+						background-color: $color;
+						color: color-yiq($color);
+						border: 1px solid $color;
+					}
+				} @else {
+					.#{$prefix}#{$component}-#{$modifier} {
+						background-color: $color;
+						color: color-yiq($color);
+						border: 1px solid darken($color, 15%);
+					}
+				}
+
+				/* Hover + Focus */
+				.#{$prefix}#{$component}-#{$modifier}:hover,
+				.#{$prefix}#{$component}-#{$modifier}:focus {
+					background-color: darken($color, 5%);
+					color: color-yiq($color);
+					border: 1px solid darken($color, 5%);
+				}
+
+				/* Onclick + Active */
+				.#{$prefix}#{$component}-#{$modifier}:active,
+				.#{$prefix}#{$component}-#{$modifier}.#{$prefix}active {
+					background-color: darken($color, 10%);
+					color: color-yiq($color);
+					border: 1px solid darken($color, 10%);
+				}
+			}
+		}
+	} @else if ($type == 'text') {
+		@each $modifier, $style in $theme-color {
+			@each $color in $style {
+				.#{$prefix}#{$component}-text-#{$modifier} {
+					@if ($modifier == 'default') {
+						color: $default;
+					} @else {
+						color: $color;
+					}
+				}
+
+				/* Hover + Focus */
+				.#{$prefix}#{$component}-text-#{$modifier}:hover,
+				.#{$prefix}#{$component}-text-#{$modifier}:focus {
+					@if ($modifier == 'default') {
+						color: darken($default, 5%);
+					} @else {
+						color: darken($color, 5%);
+					}
+				}
+
+				/* Onclick + Active */
+				.#{$prefix}#{$component}-text-#{$modifier}:active,
+				.#{$prefix}#{$component}-text-#{$modifier}.#{$prefix}active {
+					@if ($modifier == 'default') {
+						color: darken($default, 10%);
+					} @else {
+						color: darken($color, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+ * It create text color modifiers using `text-colors`
+ */
+@mixin create-text-modifiers($component) {
+	@each $modifier, $style in $text-color {
+		.#{$prefix}#{$component}-#{$modifier} {
+			@each $color in $style {
+				color: $color !important;
+			}
+		}
+	}
+}
+
+/*
+ * It create Outline modifiers using `theme-colors` with selectors (hover,
+ * active, focus)
+ */
+@mixin create-outline-modifiers-with-selectors($component) {
+	@each $modifier, $style in $theme-color {
+		@each $color in $style {
+			@if ($modifier == 'default') {
+				.#{$prefix}#{$component}-outline-#{$modifier} {
+					background-color: transparent;
+					border: 1px solid darken($color, 15%);
+					color: color-yiq($color);
+				}
+			} @else {
+				.#{$prefix}#{$component}-outline-#{$modifier} {
+					background-color: transparent;
+					border: 1px solid $color;
+					color: $color;
+				}
+			}
+
+			/* Hover + Focus */
+			.#{$prefix}#{$component}-outline-#{$modifier}:hover,
+			.#{$prefix}#{$component}-outline-#{$modifier}:focus {
+				background-color: darken($color, 5%);
+				border: 1px solid $color;
+				color: color-yiq($color);
+			}
+
+			/* Onclick + Active */
+			.#{$prefix}#{$component}-outline-#{$modifier}:active,
+			.#{$prefix}#{$component}-outline-#{$modifier}.#{$prefix}active {
+				background-color: darken($color, 10%);
+				border: 1px solid $color;
+				color: color-yiq($color);
+			}
+		}
+	}
+}

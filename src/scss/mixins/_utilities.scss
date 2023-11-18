@@ -1,0 +1,68 @@
+/*
+ * Clearfix
+ * To allow a container wraps it's floated and absolute children.
+ */
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+/*
+ * Create flex alignment utilities
+ */
+
+@mixin create-flex-alignment {
+	$flex-alignment: (
+		#{$prefix}flex-left: flex-start,
+		#{$prefix}flex-center: center,
+		#{$prefix}flex-right: flex-end,
+		#{$prefix}flex-between: space-between,
+		#{$prefix}flex-around: space-around
+	);
+
+	// create default alignments
+	@each $classname, $value in $flex-alignment {
+		.#{$classname} {
+			justify-content: $value;
+		}
+	}
+
+	// create alignments breakponts
+	@each $size, $value in $breakpoint {
+		@include respond-to($size) {
+			@each $classname, $value in $flex-alignment {
+				@include generate-flex-alignment($size, $classname, $value);
+			}
+		}
+	}
+}
+
+@mixin generate-flex-alignment($size, $classname, $value) {
+	@if ($size == 'small') {
+		.#{$classname + '\\@s'} {
+			justify-content: $value;
+		}
+	} @else if ($size == 'medium') {
+		.#{$classname + '\\@m'} {
+			justify-content: $value;
+		}
+	} @else if ($size == 'large') {
+		.#{$classname + '\\@l'} {
+			justify-content: $value;
+		}
+	} @else if ($size == 'xlarge') {
+		.#{$classname + '\\@xl'} {
+			justify-content: $value;
+		}
+	} @else {
+		@warn 'Error in generate flex alignment';
+	}
+}

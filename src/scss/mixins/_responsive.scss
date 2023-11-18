@@ -1,0 +1,32 @@
+/*
+ * Mediq Queries
+ * for responsive design.
+ */
+@mixin respond-to($value) {
+	@if map-has-key($breakpoint, $value) {
+		$size: map-get($breakpoint, $value);
+
+		@media screen and (min-width: $size) {
+			@content;
+		}
+	} @else {
+		@warn 'Unknown `#{$value}` in $breakpoint';
+	}
+}
+
+/*
+ * Mediq Queries Portrait
+ * for responsive design.
+ */
+
+@mixin respond-to-max($value) {
+	@if map-has-key($breakpoint-max, $value) {
+		$size: map-get($breakpoint-max, $value);
+
+		@media screen and (max-width: $size) {
+			@content;
+		}
+	} @else {
+		@warn 'Unknown `#{$value}` in $breakpoint-max';
+	}
+}
