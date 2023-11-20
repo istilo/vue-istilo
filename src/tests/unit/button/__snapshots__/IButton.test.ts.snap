@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Button > Should be convert into anchor instead of button but has a style of button 1`] = `"<a class=\\"i-button\\" disabled=\\"false\\" href=\\"https://google.com\\" aria-label=\\"Button\\" role=\\"button\\" title=\\"Button\\">Button</a>"`;
+
+exports[`Istilo Button > Should have WCAG attributes 1`] = `"<button class=\\"i-button\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a circle modifier class name 1`] = `"<button class=\\"i-button i-button-circle\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a color modifier class name 1`] = `"<button class=\\"i-button i-button-primary\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a dashed modifier class name 1`] = `"<button class=\\"i-button i-button-dashed\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a disabled modifier attributes 1`] = `"<button class=\\"i-button\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\" disabled=\\"\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a outline modifier class name 1`] = `"<button class=\\"i-button i-button-outline i-button-outline-undefined\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a rounded modifier class name 1`] = `"<button class=\\"i-button i-button-rounded\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a size modifier class name 1`] = `"<button class=\\"i-button i-button-large\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a square modifier class name 1`] = `"<button class=\\"i-button i-button-square\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set a text modifier class name 1`] = `"<button class=\\"i-button i-button-text\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
+
+exports[`Istilo Button > Should set default attributes, element and class 1`] = `"<button class=\\"i-button\\" type=\\"button\\" aria-label=\\"Button\\" title=\\"Button\\">Button</button>"`;
