@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Avatar > Should limit the count more than 9 1`] = `"<div class=\\"i-avatar\\"><span>+9</span></div>"`;
+
+exports[`Istilo Avatar > Should render a count 1`] = `"<div class=\\"i-avatar\\"><span>+3</span></div>"`;
+
+exports[`Istilo Avatar > Should render the image source that has been set 1`] = `"<div class=\\"i-avatar i-avatar-image\\"><img src=\\"https://statinfer.com/wp-content/uploads/dummy-user.png\\" alt=\\"AV image\\"></div>"`;
+
+exports[`Istilo Avatar > Should set a color modifier class name 1`] = `"<div class=\\"i-avatar i-avatar-primary\\"><span>AV</span></div>"`;
+
+exports[`Istilo Avatar > Should set a default class and label 1`] = `"<div class=\\"i-avatar\\"><span>AV</span></div>"`;
+
+exports[`Istilo Avatar > Should set a size modifier class name 1`] = `"<div class=\\"i-avatar i-avatar-xlarge\\"><span>AV</span></div>"`;
