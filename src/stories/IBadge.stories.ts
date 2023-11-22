@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 import IBadge from '@/components/badge/IBadge.vue';
 
 const meta: Meta<typeof IBadge> = {
-	title: 'Atoms/Badge',
+	title: 'Components/Badge',
 	parameters: {
 		docs: {
 			description: {
