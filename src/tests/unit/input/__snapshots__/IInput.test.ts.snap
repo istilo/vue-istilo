@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Input > Should add error modifier class and element 1`] = `
+"<div class=\\"i-form-wrapper\\"><label class=\\"i-form-label i-text-danger\\">Input
+    <!--v-if-->
+  </label><input class=\\"i-input i-form-danger\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\" aria-invalid=\\"true\\"><small class=\\"i-display-block i-margin-xsmall i-text-danger\\">Error message</small></div>"
+`;
+
+exports[`Istilo Input > Should add fixed width modifier class 1`] = `
+"<div class=\\"i-form-wrapper\\"><label class=\\"i-form-label\\">Input
+    <!--v-if-->
+  </label><input class=\\"i-input i-form-width-large\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Input > Should add required element and attributes 1`] = `
+"<div class=\\"i-form-wrapper\\" required=\\"true\\"><label class=\\"i-form-label\\">Input<span class=\\"i-text-danger\\">* </span></label><input class=\\"i-input\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\" required=\\"\\" aria-required=\\"true\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Input > Should add size modifier class 1`] = `
+"<div class=\\"i-form-wrapper\\"><label class=\\"i-form-label\\">Input
+    <!--v-if-->
+  </label><input class=\\"i-input i-form-large\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Input > Should add success modifier class 1`] = `
+"<div class=\\"i-form-wrapper\\"><label class=\\"i-form-label i-text-success\\">Input
+    <!--v-if-->
+  </label><input class=\\"i-input i-form-success\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Input > Should render the default childs, elements and class 1`] = `
+"<div class=\\"i-form-wrapper\\"><label class=\\"i-form-label\\">Input
+    <!--v-if-->
+  </label><input class=\\"i-input\\" type=\\"text\\" aria-label=\\"Input\\" role=\\"input\\">
+  <!--v-if-->
+</div>"
+`;
