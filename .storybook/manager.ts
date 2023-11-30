@@ -1,4 +1,5 @@
 import { addons } from '@storybook/manager-api';
+import IstiloTheme from './istilo-theme';
 
 /**
  * Features and behavior
@@ -76,7 +77,7 @@ addons.setConfig({
 	 *
 	 * Storybook Theme, see next section
 	 */
-	theme: undefined,
+	theme: IstiloTheme,
 
 	/**
 	 * selectedPanel
