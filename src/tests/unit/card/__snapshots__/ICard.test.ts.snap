@@ -1,0 +1,55 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Card > Should set a color modifier class name 1`] = `
+"<div class=\\"i-card i-card-primary\\" label=\\"AV\\">
+  <!--v-if-->
+  <div class=\\"i-card-body\\">
+    <p>Card</p>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Card > Should set a default class and children 1`] = `
+"<div class=\\"i-card i-card-default\\" label=\\"AV\\">
+  <!--v-if-->
+  <div class=\\"i-card-body\\">
+    <p>Card</p>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Card > Should set a hover modifier class name 1`] = `
+"<div class=\\"i-card i-card-default i-card-hover\\" label=\\"AV\\">
+  <!--v-if-->
+  <div class=\\"i-card-body\\">
+    <p>Card</p>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Card > Should set a size modifier class name 1`] = `
+"<div class=\\"i-card i-card-default i-card-large\\" label=\\"AV\\">
+  <!--v-if-->
+  <div class=\\"i-card-body\\">
+    <p>Card</p>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`Istilo Card > Should set a size modifier class name 2`] = `
+"<div class=\\"i-card i-card-default\\" label=\\"AV\\">
+  <div class=\\"i-card-header\\">
+    <p>Header</p>
+  </div>
+  <div class=\\"i-card-body\\">
+    <p>Card</p>
+  </div>
+  <div class=\\"i-card-footer\\">
+    <p>Footer</p>
+  </div>
+</div>"
+`;
