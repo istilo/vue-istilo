@@ -1,0 +1,258 @@
+@import '@/scss/helpers';
+@import '@/scss/functions';
+@import '@/scss/mixins';
+
+/* ============================================================
+ * Name:            Icon
+ * Description:     Icon set of istilo
+ *
+ * Component:       `#{$prefix}icon`
+ *
+ * Modifiers:		`#{$prefix}icon-small`
+ *					`#{$prefix}icon-medium`
+ *					`#{$prefix}icon-large`
+ *					`#{$prefix}icon-xlarge`
+ *					`#{$prefix}icon-xxlarge`
+ *					`#{$prefix}icon-*`
+ * ============================================================ */
+
+/* Variables
+ *============================================================ */
+$icon-color: color(default) !default;
+$icon-font-size: 1.125rem !default; // 18px
+
+$icon-font-size-1: font-size(small) !default;
+$icon-font-size-2: font-size(medium) !default;
+$icon-font-size-3: font-size(large) !default;
+$icon-font-size-4: font-size(xlarge) !default;
+$icon-font-size-5: font-size(xxlarge) !default;
+
+/* ============================================================
+ * Component: Icon
+ * ============================================================ */
+@font-face {
+	font-family: 'istilo-font-icon';
+	src:
+		url('/fonts/istilo-font-icon/istilo-font-icon.woff') format('woff'),
+		url('/fonts/istilo-font-icon/istilo-font-icon.ttf') format('truetype'),
+		url('/fonts/istilo-font-icon/istilo-font-icon.svg#istilo-font-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/*
+ * 1. Use the font for icon
+ * 2. Set initial font style
+ * 3. Make the icon inline when it has another element
+ * 4. Set margin for both sides to have space before and after of icon
+ * 5. Make the width 1em as default at horizontal center for the icon
+ */
+.#{$prefix}icon {
+	/* 1 */
+	font-family: 'istilo-font-icon';
+
+	/* 2 */
+	font-size: $icon-font-size;
+	line-height: $icon-font-size;
+	color: inherit;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	font-style: normal;
+
+	/* 3 */
+	display: inline-block;
+
+	/* 4 */
+	margin: 0 0.2em;
+
+	/* 5 */
+	width: 1em;
+	text-align: center;
+}
+
+// RTL Support
+body.istilo-rtl .istilo-icon {
+	transform: scaleX(-1);
+}
+
+/* Size modifiers
+ * ============================================================ */
+.#{$prefix}icon-small {
+	font-size: $icon-font-size-1;
+	line-height: $icon-font-size-1;
+}
+
+.#{$prefix}icon-medium {
+	font-size: $icon-font-size-2;
+	line-height: $icon-font-size-2;
+}
+
+.#{$prefix}icon-large {
+	font-size: $icon-font-size-3;
+	line-height: $icon-font-size-3;
+}
+
+.#{$prefix}icon-xlarge {
+	font-size: $icon-font-size-4;
+	line-height: $icon-font-size-4;
+}
+
+.#{$prefix}icon-xxlarge {
+	font-size: $icon-font-size-5;
+	line-height: $icon-font-size-5;
+}
+
+/* Icon modifiers
+ ============================================================ */
+.#{$prefix}icon-angle-left:before {
+	content: '\e900';
+}
+.#{$prefix}icon-angle-right:before {
+	content: '\e901';
+}
+.#{$prefix}icon-bar-chart:before {
+	content: '\e902';
+}
+.#{$prefix}icon-bell:before {
+	content: '\e903';
+}
+.#{$prefix}icon-cadet-type:before {
+	content: '\e904';
+}
+.#{$prefix}icon-categories:before {
+	content: '\e905';
+}
+.#{$prefix}icon-check:before {
+	content: '\e906';
+}
+.#{$prefix}icon-clipboard:before {
+	content: '\e907';
+}
+.#{$prefix}icon-close:before {
+	content: '\e908';
+}
+.#{$prefix}icon-courses:before {
+	content: '\e909';
+}
+.#{$prefix}icon-dashboard:before {
+	content: '\e90a';
+}
+.#{$prefix}icon-double-arrow-left:before {
+	content: '\e90b';
+}
+.#{$prefix}icon-double-arrow-right:before {
+	content: '\e90c';
+}
+.#{$prefix}icon-edit:before {
+	content: '\e90d';
+}
+.#{$prefix}icon-ellipsis-h:before {
+	content: '\e90e';
+}
+.#{$prefix}icon-ellipsis-v:before {
+	content: '\e90f';
+}
+.#{$prefix}icon-export:before {
+	content: '\e910';
+}
+.#{$prefix}icon-file:before {
+	content: '\e911';
+}
+.#{$prefix}icon-filter:before {
+	content: '\e912';
+}
+.#{$prefix}icon-full-view:before {
+	content: '\e913';
+}
+.#{$prefix}icon-instructors:before {
+	content: '\e914';
+}
+.#{$prefix}icon-lessons:before {
+	content: '\e915';
+}
+.#{$prefix}icon-link:before {
+	content: '\e916';
+}
+.#{$prefix}icon-look-up:before {
+	content: '\e917';
+}
+.#{$prefix}icon-messenger:before {
+	content: '\e918';
+}
+.#{$prefix}icon-minus:before {
+	content: '\e919';
+}
+.#{$prefix}icon-modules:before {
+	content: '\e91a';
+}
+.#{$prefix}icon-moon:before {
+	content: '\e91b';
+}
+.#{$prefix}icon-organizations:before {
+	content: '\e91c';
+}
+.#{$prefix}icon-paperclip:before {
+	content: '\e91d';
+}
+.#{$prefix}icon-people:before {
+	content: '\e91e';
+}
+.#{$prefix}icon-permissions:before {
+	content: '\e91f';
+}
+.#{$prefix}icon-pie-chart:before {
+	content: '\e920';
+}
+.#{$prefix}icon-plus:before {
+	content: '\e921';
+}
+.#{$prefix}icon-roles:before {
+	content: '\e922';
+}
+.#{$prefix}icon-room:before {
+	content: '\e923';
+}
+.#{$prefix}icon-save:before {
+	content: '\e924';
+}
+.#{$prefix}icon-schedule:before {
+	content: '\e925';
+}
+.#{$prefix}icon-search:before {
+	content: '\e926';
+}
+.#{$prefix}icon-settings:before {
+	content: '\e927';
+}
+.#{$prefix}icon-share:before {
+	content: '\e928';
+}
+.#{$prefix}icon-sort:before {
+	content: '\e929';
+}
+.#{$prefix}icon-sun:before {
+	content: '\e92a';
+}
+.#{$prefix}icon-table:before {
+	content: '\e92b';
+}
+.#{$prefix}icon-training:before {
+	content: '\e92c';
+}
+.#{$prefix}icon-tranding-down:before {
+	content: '\e92d';
+}
+.#{$prefix}icon-tranding-up:before {
+	content: '\e92e';
+}
+.#{$prefix}icon-trash:before {
+	content: '\e92f';
+}
+.#{$prefix}icon-upload:before {
+	content: '\e930';
+}
+.#{$prefix}icon-user:before {
+	content: '\e931';
+}
