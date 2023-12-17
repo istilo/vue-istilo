@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Icon > Should render the default element and class 1`] = `"<i class=\\"i-icon i-icon-dashboard\\"></i>"`;
+
+exports[`Istilo Icon > Should render the size modifer class 1`] = `"<i class=\\"i-icon i-icon-dashboard i-icon-xxlarge\\"></i>"`;
