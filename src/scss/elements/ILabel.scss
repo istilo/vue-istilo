@@ -1,0 +1,85 @@
+@import '@/scss/helpers';
+@import '@/scss/functions';
+@import '@/scss/mixins';
+
+// ============================================================
+// Name:            Label
+// Description:     Component to indicate important notes
+//
+// Component:       `#{$prefix}label`
+//
+// Modifier:        `#{$prefix}label-default`
+//                  `#{$prefix}label-primary`
+//                  `#{$prefix}label-secondary`
+//                  `#{$prefix}label-success`
+//                  `#{$prefix}label-warning`
+//                  `#{$prefix}label-danger`
+//
+// ============================================================
+
+// Variables
+// ============================================================
+
+$label-padding-vertical: margin(xsmall) !default;
+$label-padding-horizontal: margin(small) !default;
+
+$label-background: background-color(wrapper) !default;
+$label-line-height: font(line-height) !default;
+$label-font-size: font-size(small) !default;
+$label-color: color(default) !default;
+$label-border-radius: border(radius) !default;
+
+$label-success-background: theme-color(success) !default;
+$label-success-color: color(inverse) !default;
+$label-warning-background: theme-color(warning) !default;
+$label-warning-color: color(inverse) !default;
+$label-danger-background: theme-color(danger) !default;
+$label-danger-color: color(inverse) !default;
+
+/* ============================================================
+	Component: Label
+   ============================================================ */
+
+.#{$prefix}label {
+	display: inline-block;
+	padding: $label-padding-vertical $label-padding-horizontal;
+	background: $label-background;
+	line-height: $label-line-height;
+	font-size: $label-font-size;
+	color: $label-color;
+	vertical-align: middle;
+	white-space: nowrap;
+	border-radius: $label-border-radius;
+
+	font-weight: 400;
+}
+
+/* Color modifiers
+   ============================================================ */
+
+// @include create-modifiers(label);
+
+.#{$prefix}label.#{$prefix}label-primary {
+	background-color: rgba(theme-color(primary), 0.15);
+	color: color(primary);
+}
+
+.#{$prefix}label.#{$prefix}label-secondary {
+	background-color: rgba(theme-color(secondary), 0.15);
+	color: color(secondary);
+}
+
+.#{$prefix}label.#{$prefix}label-success {
+	background-color: rgba(theme-color(success), 0.15);
+	color: color(success);
+}
+
+.#{$prefix}label.#{$prefix}label-warning {
+	background-color: rgba(theme-color(warning), 0.15);
+	color: color(warning);
+}
+
+.#{$prefix}label.#{$prefix}label-danger {
+	background-color: rgba(theme-color(danger), 0.15);
+	color: color(danger);
+}
