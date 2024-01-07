@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Label > Should a color modifier class name 1`] = `"<div class=\\"i-label i-label-primary\\">Label</div>"`;
+
+exports[`Istilo Label > Should render correctly 1`] = `"<div class=\\"i-label\\">Label</div>"`;
