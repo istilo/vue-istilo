@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Breadcrumb > Should render the children 1`] = `
+"<ul class=\\"i-breadcrumb\\">
+  <i-breadcrumb-item-stub href=\\"/home\\" isactive=\\"false\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+  <i-breadcrumb-item-stub href=\\"/profile\\" isactive=\\"false\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+  <i-breadcrumb-item-stub href=\\"/profile/john-doe\\" isactive=\\"true\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+</ul>"
+`;
+
+exports[`Istilo Breadcrumb > Should render the default class and tagname 1`] = `
+"<ul class=\\"i-breadcrumb\\">
+  <i-breadcrumb-item-stub href=\\"/home\\" isactive=\\"false\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+  <i-breadcrumb-item-stub href=\\"/profile\\" isactive=\\"false\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+  <i-breadcrumb-item-stub href=\\"/profile/john-doe\\" isactive=\\"true\\" isdisabled=\\"false\\"></i-breadcrumb-item-stub>
+</ul>"
+`;
