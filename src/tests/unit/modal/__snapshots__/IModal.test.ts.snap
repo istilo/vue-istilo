@@ -1,0 +1,93 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Istilo Modal > Should have center class modifier 1`] = `
+"<div class=\\"i-modal i-flex-top i-flex\\">
+  <div class=\\"i-modal-dialog i-margin-auto-vertical\\">
+    <div class=\\"i-close i-modal-close\\"><button class=\\"i-button i-button-text i-modal-close-button\\" type=\\"button\\" aria-label=\\"Close modal\\" title=\\"Close modal\\"><i class=\\"i-icon i-icon-close\\"></i></button>
+      <p class=\\"i-modal-close-esc\\">ESC</p>
+    </div>
+    <!--v-if-->
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`Istilo Modal > Should have size class modifier 1`] = `
+"<div class=\\"i-modal i-modal-full\\">
+  <div class=\\"i-modal-dialog\\">
+    <div class=\\"i-close i-modal-close\\"><button class=\\"i-button i-button-text i-modal-close-button\\" type=\\"button\\" aria-label=\\"Close modal\\" title=\\"Close modal\\"><i class=\\"i-icon i-icon-close\\"></i></button>
+      <p class=\\"i-modal-close-esc\\">ESC</p>
+    </div>
+    <!--v-if-->
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`Istilo Modal > Should not render the close button 1`] = `
+"<div class=\\"i-modal\\">
+  <div class=\\"i-modal-dialog\\">
+    <!--v-if-->
+    <!--v-if-->
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`Istilo Modal > Should render header and footer slots 1`] = `
+"<div class=\\"i-modal\\">
+  <div class=\\"i-modal-dialog\\">
+    <div class=\\"i-close i-modal-close\\"><button class=\\"i-button i-button-text i-modal-close-button\\" type=\\"button\\" aria-label=\\"Close modal\\" title=\\"Close modal\\"><i class=\\"i-icon i-icon-close\\"></i></button>
+      <p class=\\"i-modal-close-esc\\">ESC</p>
+    </div>
+    <div class=\\"i-modal-header\\">
+      <p>header</p>
+    </div>
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <div class=\\"i-modal-footer\\">
+      <p>footer</p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Istilo Modal > Should set default element and class 1`] = `
+"<div class=\\"i-modal\\">
+  <div class=\\"i-modal-dialog\\">
+    <div class=\\"i-close i-modal-close\\"><button class=\\"i-button i-button-text i-modal-close-button\\" type=\\"button\\" aria-label=\\"Close modal\\" title=\\"Close modal\\"><i class=\\"i-icon i-icon-close\\"></i></button>
+      <p class=\\"i-modal-close-esc\\">ESC</p>
+    </div>
+    <!--v-if-->
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`Istilo Modal > Should set open class 1`] = `
+"<div class=\\"i-modal i-display-block\\">
+  <div class=\\"i-modal-dialog\\">
+    <div class=\\"i-close i-modal-close\\"><button class=\\"i-button i-button-text i-modal-close-button\\" type=\\"button\\" aria-label=\\"Close modal\\" title=\\"Close modal\\"><i class=\\"i-icon i-icon-close\\"></i></button>
+      <p class=\\"i-modal-close-esc\\">ESC</p>
+    </div>
+    <!--v-if-->
+    <div class=\\"i-modal-body\\">
+      <p id=\\"modalbody\\">Modal</p>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
