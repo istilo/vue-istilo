@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TAS Dropdown > Shoulder have button and menu list as child components. 1`] = `
+"<div class=\\"i-inline\\"><button>Dropdown</button>
+  <div class=\\"i-dropdown\\">
+    <ul>
+      <li>Option 1</li>
+      <li>Option 2</li>
+    </ul>
+  </div>
+</div>"
+`;
+
+exports[`TAS Dropdown > Shoulder set the default element and classes 1`] = `
+"<div class=\\"i-inline\\">
+  <div class=\\"i-dropdown\\"></div>
+</div>"
+`;
+
+exports[`TAS Dropdown > Shoulder set the open class modifier 1`] = `
+"<div class=\\"i-inline\\">
+  <div class=\\"i-dropdown i-open\\"></div>
+</div>"
+`;
+
+exports[`TAS Dropdown > Shoulder set the position class modifier 1`] = `
+"<div class=\\"i-inline\\">
+  <div class=\\"i-dropdown i-dropdown-right\\"></div>
+</div>"
+`;
